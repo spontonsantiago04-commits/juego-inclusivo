@@ -1,0 +1,111 @@
+<html lang="es">
+
+<head>
+
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Plataforma Inclusiva
+</title>
+
+<link rel="stylesheet"
+href="styles.css">
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#00c3ff">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style"
+content="black-translucent">
+</head>
+
+<body>
+
+<div id="app">
+
+    <h1>
+        Plataforma Inclusiva
+    </h1>
+
+    <!-- MENU -->
+
+    <div id="menu">
+
+        <button onclick="cargarJuego('visual')">
+            ⭐ Radar Estelar
+        </button>
+
+        <button onclick="cargarJuego('tea')">
+            🦖 Dino Corre
+        </button>
+
+        <button onclick="cargarJuego('auditivo')">
+            🤟 Lengua de Señas
+        </button>
+
+        <button onclick="cargarJuego('motriz')">
+            🔤 ABC
+        </button>
+
+        <button onclick="cargarJuego('figuras')">
+    🧩 Emparejar Figuras
+</button>
+   
+
+    </div>
+
+    <!-- PANTALLA -->
+
+    <div id="pantalla-juego"
+    style="display:none;">
+
+        <h2 id="titulo-juego"></h2>
+
+        <div id="escenario"></div>
+
+        <button id="btnSalir"
+        onclick="volverMenu()">
+
+            🔙 Salir
+
+        </button>
+
+    </div>
+
+    <!-- GAME OVER -->
+
+    <div id="gameover"
+    style="display:none;">
+
+        <h1>
+             GAME OVER
+        </h1>
+
+        <button onclick="volverMenu()">
+            🔙 Volver al menú
+        </button>
+
+    </div>
+
+</div>
+  <script src="./script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", () => {
+
+        navigator.serviceWorker.register(
+            "./service-worker.js"
+        );
+
+    });
+
+}
+</script>
+</body>
+</html>
