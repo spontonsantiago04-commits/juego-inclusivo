@@ -1,0 +1,659 @@
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+
+    background-image: url("https://raw.githubusercontent.com/spontonsantiago04-commits/juego-inclusivo/main/ChatGPT%20Image%2024%20jun%202026%2C%2012_21_51%20p.m..png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    overflow-x: hidden;
+}
+h1{
+
+    margin-bottom:30px;
+}
+
+/* ========================================= */
+/* ================= MENU ================== */
+/* ========================================= */
+
+#menu{
+
+    max-width:600px;
+
+    margin:auto;
+}
+
+#menu button{
+
+    width:100%;
+
+    padding:18px;
+
+    margin:12px 0;
+
+    font-size:22px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:#00c3ff;
+
+    color:black;
+
+    font-weight:bold;
+
+    transition:0.2s;
+}
+
+#menu button:hover{
+
+    transform:scale(1.03);
+}
+
+/* ========================================= */
+/* ============== ESCENARIO ================ */
+/* ========================================= */
+
+#escenario{
+
+    width:100%;
+
+    max-width:1300px;
+
+    height:700px;
+
+    margin:20px auto;
+
+    border:3px solid white;
+
+    border-radius:20px;
+
+    background:black;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* ========================================= */
+/* ============== BOTON SALIR ============== */
+/* ========================================= */
+
+#btnSalir{
+
+    margin-top:10px;
+
+    padding:14px 35px;
+
+    background:red;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    display:none;
+}
+
+/* ========================================= */
+/* =============== GAME OVER =============== */
+/* ========================================= */
+
+#gameover h1{
+
+    font-size:70px;
+
+    color:black;
+}
+
+#gameover button{
+
+    padding:16px 35px;
+
+    font-size:22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#00c3ff;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+/* ========================================= */
+/* ================= IMAGENES ============== */
+/* ========================================= */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+}
+.tituloJuego{
+
+    width:100%;
+    max-width:1300px;
+
+    margin:15px auto 25px auto;
+
+    text-align:center;
+
+    font-family:
+    "Trebuchet MS",
+    Arial,
+    sans-serif;
+
+    font-size:62px;
+
+    font-weight:900;
+
+    color:#ffffff;
+
+    -webkit-text-stroke:3px #3b9fe5;
+
+    text-shadow:
+        0 4px 0 #2c7db5,
+        0 8px 15px rgba(0,0,0,.18);
+
+    letter-spacing:2px;
+animation: aparecerTitulo .5s ease;
+}
+
+ h1{
+
+    width:100%;
+    max-width:1300px;
+
+    margin:15px auto 25px auto;
+
+    text-align:center;
+
+    font-family:
+    "Trebuchet MS",
+    Arial,
+    sans-serif;
+
+    font-size:62px;
+
+    font-weight:900;
+
+    color:#ffffff;
+
+    -webkit-text-stroke:3px #3b9fe5;
+
+    text-shadow:
+    0 4px 0 #2c7db5,
+    0 8px 15px rgba(0,0,0,.18);
+
+    letter-spacing:2px;
+
+}
+@keyframes aparecerTitulo{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+}
+/* ================================================= */
+/* ========== COMPATIBILIDAD PC + TABLET =========== */
+/* ================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Zona de los juegos */
+#escenario {
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Botones */
+button {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/* ================================================= */
+/* ================= TABLET ======================== */
+/* ================================================= */
+
+@media (max-width: 1100px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: clamp(38px, 7vw, 58px);
+        margin-bottom: 20px;
+    }
+
+    #menu {
+        width: min(92vw, 650px);
+    }
+
+    #menu button {
+        min-height: 65px;
+        padding: 14px;
+        font-size: clamp(18px, 3vw, 24px);
+    }
+
+    #escenario {
+        width: 100%;
+        height: min(70vh, 700px);
+        min-height: 450px;
+        margin: 15px auto;
+    }
+
+    .tituloJuego {
+        font-size: clamp(38px, 6vw, 58px);
+        margin: 10px auto 15px;
+    }
+
+    #btnSalir {
+        min-height: 55px;
+        padding: 12px 30px;
+    }
+}
+
+
+/* ================================================= */
+/* ============== TABLET VERTICAL ================== */
+/* ================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 38px;
+        line-height: 1.05;
+    }
+
+    #menu {
+        width: 96%;
+    }
+
+    #menu button {
+        min-height: 60px;
+        margin: 8px 0;
+        padding: 12px;
+        font-size: 19px;
+    }
+
+    #escenario {
+        height: 68vh;
+        min-height: 420px;
+        border-width: 2px;
+        border-radius: 15px;
+    }
+
+    .tituloJuego {
+        font-size: 38px;
+        line-height: 1;
+        -webkit-text-stroke: 2px #3b9fe5;
+    }
+
+    #btnSalir {
+        font-size: 18px;
+        min-height: 52px;
+    }
+}
+
+
+/* ================================================= */
+/* ============== PANTALLA CHICA =================== */
+/* ================================================= */
+
+@media (max-width: 500px) {
+
+    #escenario {
+        height: 65vh;
+        min-height: 380px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .tituloJuego {
+        font-size: 32px;
+    }
+
+    #menu button {
+        font-size: 17px;
+    }
+}
+
+
+/* ================================================= */
+/* ============== MODO HORIZONTAL ================== */
+/* ================================================= */
+
+@media (orientation: landscape) and (max-height: 700px) {
+
+    body {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin: 5px auto 10px;
+    }
+
+    .tituloJuego {
+        font-size: 38px;
+        margin: 5px auto 8px;
+    }
+
+    #escenario {
+        height: 72vh;
+        min-height: 350px;
+        margin: 8px auto;
+    }
+
+    #menu button {
+        margin: 5px 0;
+        padding: 10px;
+    }
+}
+
+
+/* ================================================= */
+/* ========== CONTROLES TÁCTILES DEL DINO ========== */
+/* ================================================= */
+
+.controlesDino {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+
+    display: none;
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.controlesDino button {
+    pointer-events: auto;
+
+    width: 120px;
+    height: 70px;
+
+    border: 3px solid white;
+    border-radius: 20px;
+
+    background: rgba(0, 195, 255, 0.9);
+
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+
+    touch-action: none;
+}
+
+
+
+/* ================================================= */
+/* ========== EMPAREJAR EN TABLET ================== */
+/* ================================================= */
+
+@media (max-width: 800px) {
+#escenario {
+    touch-action: none;
+}
+  #figuras > div {
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+    #escenario #figuras,
+    #escenario #sombras {
+        gap: 8px !important;
+    }
+
+}
+
+
+/* ================================================= */
+/* ========== LENGUA DE SEÑAS EN TABLET ============ */
+/* ================================================= */
+
+@media (max-width: 800px) {
+
+    #contenedorAuditivo {
+        gap: 10px !important;
+        padding: 8px !important;
+    }
+
+    #zonaImgs {
+        width: 68% !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    #zonaLetras {
+        width: 30% !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 5px !important;
+    }
+
+}
+  #escenario {
+    touch-action: none;
+}
+
+  /* ================================================= */
+/* ===== LENGUA DE SEÑAS - CONTROLES TÁCTILES ===== */
+/* ================================================= */
+
+#zonaLetras,
+#zonaLetras > div,
+#zonaImgs {
+    touch-action: none;
+}
+
+#zonaLetras > div {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    cursor: grab;
+}
+/* ================================================= */
+/* ===== LENGUA DE SEÑAS - TABLET ================== */
+/* ================================================= */
+
+@media (max-width: 800px) {
+
+    #contenedorAuditivo {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        min-height: 0 !important;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        gap: 8px !important;
+
+        padding: 8px !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* ============================================= */
+    /* =============== SEÑAS ======================= */
+    /* ============================================= */
+
+    #zonaImgs {
+
+        width: 66% !important;
+
+        height: 100% !important;
+
+        min-height: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 8px !important;
+
+        padding: 5px !important;
+
+        padding-right: 5px !important;
+
+        overflow-y: auto !important;
+
+        overflow-x: hidden !important;
+
+        box-sizing: border-box !important;
+
+        align-content: start !important;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /* ============================================= */
+    /* =============== LETRAS ====================== */
+    /* ============================================= */
+
+    #zonaLetras {
+
+        width: 34% !important;
+
+        height: 100% !important;
+
+        min-height: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 6px !important;
+
+        padding: 5px !important;
+
+        overflow-y: auto !important;
+
+        overflow-x: hidden !important;
+
+        box-sizing: border-box !important;
+
+        align-content: start !important;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /* ============================================= */
+    /* =============== TARJETAS ==================== */
+    /* ============================================= */
+
+    #zonaImgs > div {
+
+        width: 100% !important;
+
+        height: 120px !important;
+
+        min-height: 120px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* ============================================= */
+    /* ================ LETRAS ===================== */
+    /* ============================================= */
+
+    #zonaLetras > div {
+
+        width: 100% !important;
+
+        height: 54px !important;
+
+        min-height: 54px !important;
+
+        box-sizing: border-box !important;
+
+        font-size: 28px !important;
+    }
+
+}
